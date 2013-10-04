@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>IonD3.js: Stacked Bar Sample</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: auto;
+      position: relative;
+      width: 960px;
+    }
+
+    text {
+      font: 10px sans-serif;
+    }
+    #chart {
+    }
+    .bar_section:hover {
+      stroke: #00f;
+    }
+  </style>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="../IonD3.js"></script>
+</head>
+<body>
+<h1>IonD3.js Stacked Bar Sample</h1>
+<div id="chart"></div>
+
+
+<script>
+var data = [ 
+             ["Persona", "Tiempo 1", "Tiempo 2", "Tiempo 3"],
+             ["Jonathan",        10,         210,         33],
+             ["Max",             20,         135,         16],
+             ["Ileana",          30,          45,         26]
+           ];
+
+var options = {
+  barWidth: 30,
+  labelWidth: 100,
+  margin: {top: 40, right: 10, bottom: 20, left: 10},
+  width: 900
+};
+
+var chart = new IonD3.Stacked("#chart");
+chart.draw(data, options);
+</script>
+</body>
+</html>
